@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Pharmacy_Health_Care</string>
+    <string name="google_maps_key" />
     <string name="title_activity_dashboard">DashboardActivity</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>

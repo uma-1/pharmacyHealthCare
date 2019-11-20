@@ -59,7 +59,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
 
-    <EditText
+    <TextView
         android:id="@+id/etAccount"
         android:layout_width="239dp"
         android:layout_height="40dp"
