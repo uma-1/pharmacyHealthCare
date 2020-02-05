@@ -20,7 +20,7 @@ import reusable.Reusable;
 
 public class UpdateActivity extends AppCompatActivity {
 
-    private EditText id,etname, etprice, etmodule, etscreensize, etram, etrom, etos, etfront, etback;
+    private EditText id,etname, etprice, etdescription;
     private Button search, update, delete;
 
 
@@ -32,13 +32,7 @@ public class UpdateActivity extends AppCompatActivity {
         id = findViewById(R.id.etSearchID);
         etname = findViewById(R.id.etUName);
         etprice = findViewById(R.id.etUPrice);
-        etmodule = findViewById(R.id.etUModule);
-        etscreensize = findViewById(R.id.etUSize);
-       etram = findViewById(R.id.etURam);
-        etrom = findViewById(R.id.etURom);
-        etos = findViewById(R.id.etUOs);
-        etfront = findViewById(R.id.etUFcamera);
-        etback = findViewById(R.id.etUBcamera);
+        etdescription = findViewById(R.id.etUdes);
 
         delete = findViewById(R.id.Delete);
         search = findViewById(R.id.btnSearchID);
@@ -102,20 +96,9 @@ public class UpdateActivity extends AppCompatActivity {
 
                etname.setText(response.body().getName());
                etprice.setText(Double.toString(response.body().getPrice()));
-               etmodule.setText(response.body().getModule());
-               etscreensize.setText(response.body().getSize());
-               etram.setText(response.body().getRam());
-               etrom.setText(response.body().getRom());
-               etos.setText(response.body().getOs());
-
-               etfront.setText(response.body().getFcamera());
-               etback.setText(response.body().getBcamera());
-
-
-
+               etdescription.setText(response.body().getDesc());
 
            }
-
 
            @Override
            public void onFailure(Call<Items> call, Throwable t) {
@@ -133,7 +116,7 @@ public class UpdateActivity extends AppCompatActivity {
     API api = Reusable.getInstance().create(API.class);
 
 
-        Call<Void> listcall = api.updateItem(Integer.parseInt(id.getText().toString()),etname.getText().toString(),etmodule.getText().toString(), String.valueOf(etprice.getText().toString()),etscreensize.getText().toString(),etram.getText().toString(),etrom.getText().toString(),etos.getText().toString(),etfront.getText().toString(),etback.getText().toString());
+        Call<Void> listcall = api.updateItem(Integer.parseInt(id.getText().toString()),etname.getText().toString(),etdescription.getText().toString());
     listcall.enqueue(new Callback<Void>() {
         @Override
         public void onResponse(Call<Void> call, Response<Void> response) {
