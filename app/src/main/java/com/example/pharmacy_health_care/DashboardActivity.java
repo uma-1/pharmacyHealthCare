@@ -15,7 +15,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class DashboardActivity extends AppCompatActivity {
-    private ImageView imgSamsung, imgIphone, imgColor, imgCarbon, imgHawei, imgMarco;
+    private ImageView imgLiquid, imgTablets, imgCapsule, imgInjection, imgInhalers, imgDrops;
 //    private DrawerLayout mDrawerlayout;
 //    private ActionBarDrawerToggle mToggle;
     private Object MenuItem;
@@ -29,70 +29,70 @@ public class DashboardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
-        imgSamsung = findViewById(R.id.imgSamsung);
-        imgCarbon = findViewById(R.id.imgColor);
-        imgColor = findViewById(R.id.imgColor);
-        imgIphone = findViewById(R.id.imgIphone);
-        imgHawei = findViewById(R.id.imgHawaei);
-        imgMarco = findViewById(R.id.imgColor);
+        imgLiquid = findViewById(R.id.imgLiquid);
+        imgCapsule = findViewById(R.id.imgCapsule);
+        imgInjection = findViewById(R.id.imgInjection);
+        imgTablets = findViewById(R.id.imgTablets);
+        imgDrops = findViewById(R.id.imgDrops);
+        imgInhalers = findViewById(R.id.imgInhalers);
 
 
 
-        imgSamsung.setOnClickListener(new View.OnClickListener() {
+        imgLiquid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DashboardActivity.this, MobileDetailActivity.class);
-                intent.putExtra("selectedName", "Samsung");
+                Intent intent = new Intent(DashboardActivity.this, MedicineDetailActivity.class);
+                intent.putExtra("selectedName", "Liquid");
                 startActivity(intent);
 
             }
         });
 
-        imgCarbon.setOnClickListener(new View.OnClickListener() {
+        imgCapsule.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DashboardActivity.this, MobileDetailActivity.class);
-                intent.putExtra("selectedName", "Carbon");
+                Intent intent = new Intent(DashboardActivity.this, MedicineDetailActivity.class);
+                intent.putExtra("selectedName", "Capsule");
                 startActivity(intent);
 
 
             }
         });
 
-        imgColor.setOnClickListener(new View.OnClickListener() {
+        imgInjection.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DashboardActivity.this, MobileDetailActivity.class);
-                intent.putExtra("selectedName", "Color");
+                Intent intent = new Intent(DashboardActivity.this, MedicineDetailActivity.class);
+                intent.putExtra("selectedName", "Injection");
                 startActivity(intent);
 
             }
         });
 
-        imgIphone.setOnClickListener(new View.OnClickListener() {
+        imgTablets.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DashboardActivity.this, MobileDetailActivity.class);
-                intent.putExtra("selectedName", "Iphone");
+                Intent intent = new Intent(DashboardActivity.this, MedicineDetailActivity.class);
+                intent.putExtra("selectedName", "Tablets");
                 startActivity(intent);
 
             }
         });
 
-        imgMarco.setOnClickListener(new View.OnClickListener() {
+        imgDrops.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DashboardActivity.this, MobileDetailActivity.class);
-                intent.putExtra("selectedName", "Lenovo");
+                Intent intent = new Intent(DashboardActivity.this, MedicineDetailActivity.class);
+                intent.putExtra("selectedName", "Drops");
                 startActivity(intent);
 
             }
         });
-        imgHawei.setOnClickListener(new View.OnClickListener() {
+        imgInhalers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DashboardActivity.this, MobileDetailActivity.class);
-                intent.putExtra("selectedName", "Huawei");
+                Intent intent = new Intent(DashboardActivity.this, MedicineDetailActivity.class);
+                intent.putExtra("selectedName", "Inhalers");
                 startActivity(intent);
 
             }

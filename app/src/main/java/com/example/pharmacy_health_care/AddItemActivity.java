@@ -37,7 +37,7 @@ import retrofit2.Response;
 import reusable.Reusable;
 
 public class AddItemActivity extends AppCompatActivity {
-    private EditText etName, etPrice;
+    private EditText etName, etPrice, etDes;
     private ImageView imgItem;
     private Button btnSave, btnViewData;
     String imagePath;
@@ -49,6 +49,7 @@ public class AddItemActivity extends AppCompatActivity {
 
         etName = findViewById(R.id.etName);
         etPrice= findViewById(R.id.etPrice);
+        etDes = findViewById(R.id.etDes);
         imgItem= findViewById(R.id.imgItem);
         btnSave = findViewById(R.id.btnSave);
         btnViewData = findViewById(R.id.btnViewData);
@@ -118,11 +119,12 @@ public class AddItemActivity extends AppCompatActivity {
     private void save() {
         saveImageOnly();
         String name = etName.getText().toString();
+        String description = etDes.getText().toString();
 
 
         double price = Double.parseDouble(etPrice.getText().toString());
 
-        Items heroes = new Items(name,imageName, price);
+        Items heroes = new Items(name,imageName, price, description);
 
         API Api = Reusable.getInstance().create(API.class);
         Call<Void> itemsCall = Api.addItem(heroes);

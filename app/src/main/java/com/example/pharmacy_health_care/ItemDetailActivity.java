@@ -16,7 +16,7 @@ import java.net.URL;
 public class ItemDetailActivity extends AppCompatActivity {
 
     ImageView imageprofile;
-    TextView tvname, tvprice, tvmodule, tvsize, tvram, tvrom, tvos, tvfcamera, tvbcamera;
+    TextView tvname, tvprice, tvDes;
     Button order;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,19 +26,13 @@ public class ItemDetailActivity extends AppCompatActivity {
         imageprofile = findViewById(R.id.imgProfile);
         tvname= findViewById(R.id.tvName);
         tvprice= findViewById(R.id.tvPrice);
-        tvmodule= findViewById(R.id.tvModule);
-        tvsize= findViewById(R.id.tvSize);
-        tvram= findViewById(R.id.tvRam);
-        tvrom= findViewById(R.id.tvRom);
-        tvos = findViewById(R.id.tvOs);
-        tvfcamera= findViewById(R.id.tvFcamera);
-        tvbcamera= findViewById(R.id.tvBcamera);
+        tvDes= findViewById(R.id.tvDes);
         order = findViewById(R.id.btnOrder);
 
         order.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Commons.showNotification(getApplicationContext(),"Order info","Yu have sucessfully ordered this product.");
+                Commons.showNotification(getApplicationContext(),"Order info","You have sucessfully ordered this product.");
             }
         });
 
@@ -57,13 +51,7 @@ public class ItemDetailActivity extends AppCompatActivity {
             }
             tvname.setText(bundle.getString("name"));
             tvprice.setText(bundle.getString("price"));
-            tvmodule.setText(bundle.getString("module"));
-            tvsize.setText(bundle.getString("size"));
-            tvram.setText(bundle.getString("ram"));
-            tvrom.setText(bundle.getString("rom"));
-            tvos.setText(bundle.getString("os"));
-            tvfcamera.setText(bundle.getString("fcamera"));
-            tvbcamera.setText(bundle.getString("bcamera"));
+            tvDes.setText(bundle.getString("Des"));
         }
     }
 }
