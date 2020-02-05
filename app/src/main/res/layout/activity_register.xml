@@ -5,72 +5,125 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/gradient_background"
+    android:background="@drawable/back"
     tools:context=".RegisterActivity">
 
     <TextView
-        android:id="@+id/tvRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="Register"
-        android:textSize="40dp"
-        android:layout_gravity="center"
-        android:layout_margin="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:textSize="30dp"
+        android:gravity="center"
+        />
 
-    <EditText
-        android:id="@+id/etfullname"
-        android:hint="Full Name"
-        android:textSize="20dp"
-        android:layout_margin="10dp"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
 
-    <EditText
-        android:id="@+id/etaddress"
-        android:hint="Address"
-        android:textSize="20dp"
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".RegisterActivity">
 
-    <EditText
-        android:id="@+id/etcontact"
-        android:hint="Contact No."
-        android:textSize="20dp"
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+            <EditText
 
-    <EditText
-        android:id="@+id/etEmail"
-        android:hint="EmailID"
-        android:textSize="20dp"
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+                android:id="@+id/etfname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
+                android:hint="First Name"
+                android:textSize="20dp" />
 
-    <EditText
-        android:id="@+id/etUsername"
-        android:hint="UserName"
-        android:textSize="20dp"
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/etlname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
+                android:hint="Last Name"
+                android:textSize="20dp"
 
-    <EditText
-        android:id="@+id/etPassword"
-        android:hint="Password"
-        android:textSize="20dp"
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+                />
 
-    <Button
-        android:id="@+id/btnSubmit"
-        android:text="Submit"
-        android:textSize="20dp"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+            <EditText
+
+                android:id="@+id/etemail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
+                android:hint="Email"
+                android:textSize="20dp"
+
+
+                />
+
+
+            <EditText
+                android:id="@+id/etphone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
+                android:hint="Phone number"
+                android:textSize="20dp"
+
+                />
+
+            <EditText
+                android:id="@+id/etusername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
+                android:hint="Username"
+                android:textSize="20dp"
+
+                />
+
+            <EditText
+                android:id="@+id/etpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textSize="20dp"
+
+                />
+
+            <EditText
+                android:id="@+id/etconfirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
+                android:hint="Confirm password"
+                android:inputType="textPassword"
+                android:textSize="20dp"
+
+                />
+
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20sp"
+                android:background="@drawable/button"
+               android:layout_gravity="center"
+                android:text="Register"
+                android:textSize="25dp" />
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20sp"
+                android:layout_gravity="center"
+                android:background="@drawable/button"
+                android:text="Back"
+                android:textSize="25dp" />
+
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

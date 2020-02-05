@@ -4,81 +4,115 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/back"
     android:orientation="vertical"
-    android:background="@drawable/gradient_background"
-    tools:context=".LoginActivity">
+    android:gravity="center"
+    android:padding="20dp">
 
-    <TextView
-        android:id="@+id/etPharmacy"
-        android:layout_width="355dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="28dp"
-        android:text="Pharmacy Health Care"
-        android:textSize="30dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imgLogo"
-        android:layout_width="239dp"
-        android:layout_height="156dp"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPharmacy"
+        android:id="@+id/imglogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
         app:srcCompat="@drawable/logo" />
 
     <EditText
-        android:id="@+id/txtUsername"
-        android:layout_width="180dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="68dp"
-        android:hint="Enter your Username"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
+        android:id="@+id/etLusername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="15dp"
+
+        android:drawableLeft="@drawable/ic_person_black_24dp"
+        android:background="@drawable/username"
+        android:drawablePadding="10dp"
+        android:hint="Username"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textColorHighlight="@color/white"/>
 
     <EditText
-        android:id="@+id/txtPassword"
-        android:layout_width="180dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="28dp"
+        android:id="@+id/etLpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="15dp"
+        android:background="@drawable/username"
+        android:drawableLeft="@drawable/ic_lock_black_24dp"
+        android:drawablePadding="10dp"
         android:hint="Password"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtUsername" />
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textColorHighlight="@color/white"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Usertype"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="serif-monospace"
+
+
+            />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:backgroundTint="@color/white"
+
+
+
+
+            ></Spinner>
+
+
+
+    </LinearLayout>
+
+
 
     <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="96dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="168dp"
-        android:layout_marginTop="52dp"
-        android:text="Login"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
-
-    <TextView
-        android:id="@+id/etAccount"
-        android:layout_width="239dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="44dp"
-        android:layout_gravity="center"
-        android:text="Don't have an account? "
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+        android:id="@+id/btnlogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Log In"
+        android:shadowColor="@android:color/transparent"
+        android:padding="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/shapelogin"/>
 
     <Button
-        android:id="@+id/btnRegister"
-        android:layout_width="91dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center"
-        android:text="Register"
-        app:layout_constraintStart_toEndOf="@+id/etAccount"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+        android:id="@+id/btnsignup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:shadowColor="@android:color/transparent"
+        android:padding="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/shapesignup"
+        android:textColor="@color/white"/>
+
 
 </LinearLayout>
