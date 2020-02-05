@@ -1,5 +1,6 @@
 package com.example.pharmacy_health_care;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 //import android.support.v7.app.AppCompatActivity;
@@ -24,22 +25,23 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import reusable.Reusable;
 
-public class MobileDetailActivity extends AppCompatActivity {
+public class MedicineDetailActivity extends AppCompatActivity {
     private Button buttonback;
     private RecyclerView rvItems;
     List<Items> itemList = new ArrayList<>();
     String selectedName;
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mobile_detail);
+        setContentView(R.layout.activity_medicine_detail);
 
-        rvItems= findViewById(R.id.mobileDetailRv);
+        rvItems= findViewById(R.id.medicineDetailRv);
         buttonback = findViewById(R.id.btnbacks);
         buttonback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MobileDetailActivity.this, DashboardActivity.class);
+                Intent intent = new Intent(MedicineDetailActivity.this, DashboardActivity.class);
                 startActivity(intent);
             }
         });
@@ -61,7 +63,7 @@ public class MobileDetailActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<Items>> call, Throwable t) {
-                Toast.makeText(MobileDetailActivity.this, "Error : "+t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+                Toast.makeText(MedicineDetailActivity.this, "Error : "+t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
             }
         });
 
@@ -75,7 +77,8 @@ public class MobileDetailActivity extends AppCompatActivity {
             String image= item.getImageName();
 
             if ( item.getName().equals(selectedName) ){
-                itemsArrayList.add(new Items(item.getName(), item.getModule(), item.getImageName(), item.getSize(), item.getRam(),item.getRom(),item.getOs(),item.getFcamera(),item.getBcamera(),item.getPrice()));
+
+                itemsArrayList.add(new Items(item.getName(), item.getImageName(),item.getPrice(), item.getDesc()));
             }
 
         }
