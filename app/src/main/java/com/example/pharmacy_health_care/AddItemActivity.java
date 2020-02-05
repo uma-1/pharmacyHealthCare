@@ -37,7 +37,7 @@ import retrofit2.Response;
 import reusable.Reusable;
 
 public class AddItemActivity extends AppCompatActivity {
-    private EditText etName, etModule, etPrice, etSize, etRam, etRom, etOs, etFcamera, etBcamera;
+    private EditText etName, etPrice;
     private ImageView imgItem;
     private Button btnSave, btnViewData;
     String imagePath;
@@ -48,19 +48,7 @@ public class AddItemActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_item);
 
         etName = findViewById(R.id.etName);
-        etModule= findViewById(R.id.etModule);
         etPrice= findViewById(R.id.etPrice);
-        etSize = findViewById(R.id.etSize);
-        etRam = findViewById(R.id.etRam);
-        etRom = findViewById(R.id.etRom);
-        etOs = findViewById(R.id.etOs);
-        etFcamera = findViewById(R.id.etFcamera);
-        etBcamera = findViewById(R.id.etBcamera);
-
-
-
-
-
         imgItem= findViewById(R.id.imgItem);
         btnSave = findViewById(R.id.btnSave);
         btnViewData = findViewById(R.id.btnViewData);
@@ -130,18 +118,11 @@ public class AddItemActivity extends AppCompatActivity {
     private void save() {
         saveImageOnly();
         String name = etName.getText().toString();
-        String module = etModule.getText().toString();
-        String size = etSize.getText().toString();
-        String ram = etRam.getText().toString();
-        String rom = etRom.getText().toString();
-        String os = etOs.getText().toString();
-        String fcamera = etFcamera.getText().toString();
-        String bcamera = etBcamera.getText().toString();
 
 
         double price = Double.parseDouble(etPrice.getText().toString());
 
-        Items heroes = new Items(name, module, imageName, size, ram, rom, os, fcamera, bcamera,price);
+        Items heroes = new Items(name,imageName, price);
 
         API Api = Reusable.getInstance().create(API.class);
         Call<Void> itemsCall = Api.addItem(heroes);
