@@ -62,7 +62,6 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ItemViewHold
             e.printStackTrace();
         }
         itemViewHolder.tvName.setText(item.getName());
-        itemViewHolder.tvModule.setText(item.getModule());
 
         itemViewHolder.imgItem.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,14 +69,8 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ItemViewHold
                 Intent intent = new Intent(mContext, ItemDetailActivity.class);
                 intent.putExtra("image", imagePath);
                 intent.putExtra("name", item.getName());
-                intent.putExtra("module", item.getModule());
                 intent.putExtra("price", item.getPrice()+"");
-                intent.putExtra("size", item.getSize());
-                intent.putExtra("ram", item.getRam());
-                intent.putExtra("rom", item.getRom());
-                intent.putExtra("os", item.getOs());
-                intent.putExtra("fcamera", item.getFcamera());
-                intent.putExtra("bcamera", item.getBcamera());
+                intent.putExtra("description", item.getDesc());
 
                 mContext.startActivity(intent);
             }
@@ -91,13 +84,12 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ItemViewHold
 
     public class ItemViewHolder extends RecyclerView.ViewHolder{
         CircleImageView imgItem;
-        TextView tvName, tvModule;
+        TextView tvName;
 
         public ItemViewHolder(@NonNull View itemView) {
             super(itemView);
             imgItem = itemView.findViewById(R.id.imgItem);
             tvName = itemView.findViewById(R.id.tvName);
-            tvModule = itemView.findViewById(R.id.tvModule);
         }
     }
 }
