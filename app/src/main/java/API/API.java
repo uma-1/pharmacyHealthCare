@@ -57,19 +57,15 @@ public interface API {
     Call<Void> updateItem(
             @Path("itemId") int itemId,
             @Field("name") String name,
-            @Field("module") String module,
             @Field("price") String price,
-            @Field("size") String size,
-            @Field("ram") String ram,
-            @Field("rom") String rom,
-            @Field("os") String os,
-            @Field("fcamera") String fcamera,
-            @Field("bcamera") String bcamera
+            @Field("description") String description
     );
 
 
 
     @DELETE("item/del/{itemId}")
     Call<Void> deleteItem(@Path("itemId") int itemId);
+
+    Call<Void> updateItem(int parseInt, String toString, String toString1);
 }
 

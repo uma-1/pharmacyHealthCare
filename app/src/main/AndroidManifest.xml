@@ -14,12 +14,24 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Admin.UpdateActivity"></activity>
+        <activity android:name=".Admin.UpdateActivity">
+
+        </activity>
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".SearchActivity" />
-        <activity android:name=".MobileDetailActivity" />
+        <activity android:name=".MedicineDetailActivity" />
         <activity android:name=".ItemDetailActivity" />
         <activity android:name=".AddItemActivity"></activity>
-        <activity android:name=".Admin.AdminDashboardActivity"></activity>
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Admin.AdminDashboardActivity">
+
+        </activity>
     </application>
 
 

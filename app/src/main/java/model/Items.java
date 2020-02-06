@@ -56,7 +56,7 @@ public class Items {
         return description;
     }
 
-    public void setBcamera(String bcamera) {
+    public void setDescription(String bcamera) {
         this.description = description;
     }
 
