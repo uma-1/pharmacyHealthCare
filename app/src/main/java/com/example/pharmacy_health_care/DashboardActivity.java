@@ -41,7 +41,7 @@ public class DashboardActivity extends AppCompatActivity {
         imgLiquid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DashboardActivity.this, MedicineDetailActivity.class);
+                Intent intent = new Intent(DashboardActivity.this, ItemDetailActivity.class);
                 intent.putExtra("selectedName", "Liquid");
                 startActivity(intent);
 
@@ -51,7 +51,7 @@ public class DashboardActivity extends AppCompatActivity {
         imgCapsule.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DashboardActivity.this, MedicineDetailActivity.class);
+                Intent intent = new Intent(DashboardActivity.this, ItemDetailActivity.class);
                 intent.putExtra("selectedName", "Capsule");
                 startActivity(intent);
 
@@ -62,7 +62,7 @@ public class DashboardActivity extends AppCompatActivity {
         imgInjection.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DashboardActivity.this, MedicineDetailActivity.class);
+                Intent intent = new Intent(DashboardActivity.this, ItemDetailActivity.class);
                 intent.putExtra("selectedName", "Injection");
                 startActivity(intent);
 
@@ -72,7 +72,7 @@ public class DashboardActivity extends AppCompatActivity {
         imgTablets.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DashboardActivity.this, MedicineDetailActivity.class);
+                Intent intent = new Intent(DashboardActivity.this, ItemDetailActivity.class);
                 intent.putExtra("selectedName", "Tablets");
                 startActivity(intent);
 
@@ -82,7 +82,7 @@ public class DashboardActivity extends AppCompatActivity {
         imgDrops.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DashboardActivity.this, MedicineDetailActivity.class);
+                Intent intent = new Intent(DashboardActivity.this, ItemDetailActivity.class);
                 intent.putExtra("selectedName", "Drops");
                 startActivity(intent);
 
@@ -91,7 +91,7 @@ public class DashboardActivity extends AppCompatActivity {
         imgInhalers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DashboardActivity.this, MedicineDetailActivity.class);
+                Intent intent = new Intent(DashboardActivity.this, ItemDetailActivity.class);
                 intent.putExtra("selectedName", "Inhalers");
                 startActivity(intent);
 
