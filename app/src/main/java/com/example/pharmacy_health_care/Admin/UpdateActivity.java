@@ -42,7 +42,7 @@ public class UpdateActivity extends AppCompatActivity {
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                updateItem();
+               updateItem();
             }
         });
 
@@ -75,7 +75,7 @@ public class UpdateActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<Void> call, Throwable t) {
-                Toast.makeText(UpdateActivity.this, "error:" +t.getMessage(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(UpdateActivity.this, "error:" +t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -88,24 +88,24 @@ public class UpdateActivity extends AppCompatActivity {
 
 
         API api  = Reusable.getInstance().create(API.class);
-        Call<Items> ListCall = api.getItemById(Integer.parseInt(id.getText().toString()));
-        ListCall.enqueue(new Callback<Items>() {
-            @Override
-            public void onResponse(Call<Items> call, Response<Items> response) {
+       Call<Items> ListCall = api.getItemById(Integer.parseInt(id.getText().toString()));
+       ListCall.enqueue(new Callback<Items>() {
+           @Override
+           public void onResponse(Call<Items> call, Response<Items> response) {
 
 
-                etname.setText(response.body().getName());
-                etprice.setText(Double.toString(response.body().getPrice()));
-                etdescription.setText(response.body().getDescription());
+               etname.setText(response.body().getName());
+               etprice.setText(Double.toString(response.body().getPrice()));
+               etdescription.setText(response.body().getDescription());
 
-            }
+           }
 
-            @Override
-            public void onFailure(Call<Items> call, Throwable t) {
-                Toast.makeText(UpdateActivity.this, "error:" + t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+           @Override
+           public void onFailure(Call<Items> call, Throwable t) {
+               Toast.makeText(UpdateActivity.this, "error:" + t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
 
-            }
-        });
+           }
+       });
 
     }
 
@@ -113,24 +113,24 @@ public class UpdateActivity extends AppCompatActivity {
 
     private void updateItem() {
 
-        API api = Reusable.getInstance().create(API.class);
+    API api = Reusable.getInstance().create(API.class);
 
 
         Call<Void> listcall = api.updateItem(Integer.parseInt(id.getText().toString()),etname.getText().toString(),etdescription.getText().toString());
-        listcall.enqueue(new Callback<Void>() {
-            @Override
-            public void onResponse(Call<Void> call, Response<Void> response) {
-                Toast.makeText(UpdateActivity.this, "update successfully", Toast.LENGTH_SHORT).show();
+    listcall.enqueue(new Callback<Void>() {
+        @Override
+        public void onResponse(Call<Void> call, Response<Void> response) {
+            Toast.makeText(UpdateActivity.this, "update successfully", Toast.LENGTH_SHORT).show();
 
 
-            }
+        }
 
-            @Override
-            public void onFailure(Call<Void> call, Throwable t) {
-                Toast.makeText(UpdateActivity.this, "Error:" +t.getMessage(), Toast.LENGTH_SHORT).show();
+        @Override
+        public void onFailure(Call<Void> call, Throwable t) {
+            Toast.makeText(UpdateActivity.this, "Error:" +t.getMessage(), Toast.LENGTH_SHORT).show();
 
-            }
-        });
+        }
+    });
 
     }
 }
