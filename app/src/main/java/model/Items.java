@@ -2,22 +2,20 @@ package model;
 
 public class Items {
 
-    private String id, name, imageName, description;
-    private double price;
+    private String id;
+    private String name;
+    private String imageName;
+    private String description;
+    private Double price;
 
-    public Items(String itemName, String name, double price, String description) {
+    public Items(String name, String desciption, String imageName, double price) {
 
 
         this.name = name;
-        this.price = price;
         this.imageName = imageName;
-        this.description = description;
-
+        this.description = desciption;
+        this.price = price;
     }
-
-
-
-
 
 
     public String getId() {
@@ -36,14 +34,6 @@ public class Items {
         this.name = name;
     }
 
-    public double getprice() {
-        return price;
-    }
-
-    public void setModule(String module) {
-        this.price = price;
-    }
-
     public String getImageName() {
         return imageName;
     }
@@ -52,11 +42,11 @@ public class Items {
         this.imageName = imageName;
     }
 
-    public String getDesc() {
+    public String getDescription() {
         return description;
     }
 
-    public void setDescription(String bcamera) {
+    public void setDescription(String os) {
         this.description = description;
     }
 

@@ -5,12 +5,12 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
-import android.os.Bundle;
 import android.os.StrictMode;
 import android.provider.MediaStore;
 //import android.support.annotation.Nullable;
 //import android.support.v4.content.CursorLoader;
 //import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -37,7 +37,7 @@ import retrofit2.Response;
 import reusable.Reusable;
 
 public class AddItemActivity extends AppCompatActivity {
-    private EditText etName, etPrice, etDes;
+    private EditText etName, etPrice,etDes;
     private ImageView imgItem;
     private Button btnSave, btnViewData;
     String imagePath;
@@ -50,6 +50,7 @@ public class AddItemActivity extends AppCompatActivity {
         etName = findViewById(R.id.etName);
         etPrice= findViewById(R.id.etPrice);
         etDes = findViewById(R.id.etDes);
+
         imgItem= findViewById(R.id.imgItem);
         btnSave = findViewById(R.id.btnSave);
         btnViewData = findViewById(R.id.btnViewData);
@@ -83,7 +84,7 @@ public class AddItemActivity extends AppCompatActivity {
 
         if (resultCode == RESULT_OK){
             if (data == null){
-                Toast.makeText(AddItemActivity.this, "Please Select Image", Toast.LENGTH_LONG).show();
+                Toast.makeText(AddItemActivity.this, "Please Select Image",Toast.LENGTH_LONG).show();
             }
         }
         Uri uri = data.getData();
@@ -120,11 +121,9 @@ public class AddItemActivity extends AppCompatActivity {
         saveImageOnly();
         String name = etName.getText().toString();
         String description = etDes.getText().toString();
-
-
         double price = Double.parseDouble(etPrice.getText().toString());
 
-        Items heroes = new Items(name,imageName, price, description);
+        Items heroes = new Items(name,description,imageName, price);
 
         API Api = Reusable.getInstance().create(API.class);
         Call<Void> itemsCall = Api.addItem(heroes);

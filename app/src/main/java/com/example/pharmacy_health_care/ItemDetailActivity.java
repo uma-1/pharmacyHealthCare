@@ -51,7 +51,7 @@ public class ItemDetailActivity extends AppCompatActivity {
             }
             tvname.setText(bundle.getString("name"));
             tvprice.setText(bundle.getString("price"));
-            tvDes.setText(bundle.getString("Des"));
+            tvDes.setText(bundle.getString("description"));
         }
     }
 }
