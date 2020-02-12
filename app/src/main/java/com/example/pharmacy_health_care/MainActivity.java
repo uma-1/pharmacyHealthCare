@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
         for (Items item: itemList){
             String image= item.getImageName();
-            contactList.add(new Items(image,item.getName(),  item.getPrice(), item.getDesc()));
+            contactList.add(new Items(item.getName(),item.getDesciption(),item.getImageName(),item.getPrice() ));
         }
         ItemsAdapter itemAdapter = new ItemsAdapter(this, contactList);
         rvItems.setAdapter(itemAdapter);
