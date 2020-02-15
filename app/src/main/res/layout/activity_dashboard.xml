@@ -11,325 +11,343 @@
 
 
     <RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FCFCFC"
-    >
-
-    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="DashBoard"
-            android:gravity="center"
-            android:textColor="#000"
-            android:textSize="32dp"
-            />
+        android:layout_height="match_parent"
+        android:background="@drawable/back">
 
-
-
-
-
-    <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="10dp"
-            >
-            <LinearLayout
-                android:clipToPadding="false"
-                android:gravity="center"
-                android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:id="@+id/bankcardId"
-                    android:layout_width="160dp"
-                    android:layout_height="190dp"
-
-                    >
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="130dp"
-                            android:gravity="center"
-                            >
-                            <ImageView
-                                android:id="@+id/imgLiquid"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:src="@drawable/liquid"
-                                />
-                        </LinearLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Liquid"
-                            android:textColor="#000"
-                            android:textSize="18dp"
-                            android:layout_margin="6dp"
-                            />
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/signupColor"
-                            android:layout_margin="2dp"/>
-
-
-                    </LinearLayout>
-                </LinearLayout>
-                <LinearLayout
-                    android:clickable="true"
-                    android:id="@+id/bankcardId1"
-                    android:layout_width="160dp"
-                    android:layout_height="190dp"
-                    android:layout_margin="10dp"
-                    android:padding="0dp">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="130dp"
-                            android:gravity="center"
-                          >
-
-                            <ImageView
-                                android:id="@+id/imgCapsule"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/capsule" />
-                        </LinearLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Capsule"
-                            android:textColor="#000"
-                            android:textSize="18dp"
-                            android:layout_margin="6dp"
-                            />
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/signupColor"
-                            android:layout_margin="2dp"/>
-
-
-                    </LinearLayout>
-                </LinearLayout>
-
-            </LinearLayout>
-            <LinearLayout
-                android:clipToPadding="false"
+                android:layout_height="wrap_content"
                 android:gravity="center"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
+                android:text="DashBoard"
+                android:textColor="#000"
+                android:textSize="32dp" />
+
+            <Button
+                android:id="@+id/btnMap"
+                android:text="Find Here"
+                android:layout_gravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+            <ScrollView
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content">
+
                 <LinearLayout
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:id="@+id/bankcardId2"
-                    android:layout_width="160dp"
-                    android:layout_height="190dp"
-                    android:layout_margin="10dp"
-                    android:padding="0dp">
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
                         android:gravity="center"
-                        android:orientation="vertical">
+                        android:orientation="horizontal">
+
                         <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="130dp"
-                            android:gravity="center"
+                            android:id="@+id/bankcardId"
+                            android:layout_width="160dp"
+                            android:layout_height="190dp"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+
                             >
 
-                            <ImageView
-                                android:id="@+id/imgInjection"
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical">
 
-                                android:src="@drawable/injection" />
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="130dp"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:id="@+id/imgLiquid"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:src="@drawable/liquid" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="6dp"
+                                    android:text="Liquid"
+                                    android:textColor="#000"
+                                    android:textSize="18dp" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_margin="2dp"
+                                    android:background="@color/signupColor" />
+
+
+                            </LinearLayout>
                         </LinearLayout>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Injections"
-                            android:textColor="#000"
-                            android:textSize="18dp"
-                            android:layout_margin="6dp"/>
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/signupColor"
-                            android:layout_margin="2dp"/>
+                        <LinearLayout
+                            android:id="@+id/bankcardId1"
+                            android:layout_width="160dp"
+                            android:layout_height="190dp"
+                            android:layout_margin="10dp"
+                            android:clickable="true"
+                            android:padding="0dp">
 
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="130dp"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:id="@+id/imgCapsule"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/capsule" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="6dp"
+                                    android:text="Capsule"
+                                    android:textColor="#000"
+                                    android:textSize="18dp" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_margin="2dp"
+                                    android:background="@color/signupColor" />
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/bankcardId2"
+                            android:layout_width="160dp"
+                            android:layout_height="190dp"
+                            android:layout_margin="10dp"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:padding="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="130dp"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:id="@+id/imgInjection"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+
+                                        android:src="@drawable/injection" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="6dp"
+                                    android:text="Injections"
+                                    android:textColor="#000"
+                                    android:textSize="18dp" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_margin="2dp"
+                                    android:background="@color/signupColor" />
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/bankcardId3"
+                            android:layout_width="160dp"
+                            android:layout_height="190dp"
+                            android:layout_margin="10dp"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:padding="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="130dp"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:id="@+id/imgTablets"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:padding="10dp"
+                                        android:src="@drawable/tablets" />
+                                </LinearLayout>
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="6sp"
+                                    android:text="Tablets"
+                                    android:textColor="#000"
+                                    android:textSize="18dp" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_margin="2dp"
+                                    android:background="@color/signupColor" />
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/bankcardId5"
+                            android:layout_width="160dp"
+                            android:layout_height="190dp"
+                            android:layout_margin="10dp"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:padding="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="130dp"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:id="@+id/imgDrops"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:src="@drawable/drops" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="6dp"
+                                    android:text="Drops"
+                                    android:textColor="#000"
+                                    android:textSize="18dp" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_margin="2dp"
+                                    android:background="@color/signupColor" />
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/bankcardId4"
+                            android:layout_width="160dp"
+                            android:layout_height="190dp"
+                            android:layout_margin="10dp"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:padding="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="130dp"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:id="@+id/imgInhalers"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+
+                                        android:src="@drawable/inhalers" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="6dp"
+                                    android:text="Inhalers"
+                                    android:textColor="#000"
+                                    android:textSize="18dp" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_margin="2dp"
+                                    android:background="@color/signupColor" />
+
+
+                            </LinearLayout>
+                        </LinearLayout>
 
                     </LinearLayout>
                 </LinearLayout>
-                <LinearLayout
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:id="@+id/bankcardId3"
-                    android:layout_width="160dp"
-                    android:layout_height="190dp"
-                    android:layout_margin="10dp"
-                    android:padding="0dp">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="130dp"
-                            android:gravity="center"
-                            >
-
-                            <ImageView
-                                android:id="@+id/imgTablets"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:padding="10dp"
-                                android:src="@drawable/tablets" />
-                        </LinearLayout>
-
-                        <TextView
-
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Tablets"
-                            android:textColor="#000"
-                            android:textSize="18dp"
-                            android:layout_margin="6sp"/>
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/signupColor"
-                            android:layout_margin="2dp"/>
-
-
-                    </LinearLayout>
-                </LinearLayout>
-
-            </LinearLayout>
-            <LinearLayout
-                android:clipToPadding="false"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:id="@+id/bankcardId5"
-                    android:layout_width="160dp"
-                    android:layout_height="190dp"
-                    android:layout_margin="10dp"
-                    android:padding="0dp">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="130dp"
-                            android:gravity="center"
-                            >
-                            <ImageView
-                                android:id="@+id/imgDrops"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:src="@drawable/drops"
-                                />
-                        </LinearLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Drops"
-                            android:textColor="#000"
-                            android:textSize="18dp"
-                            android:layout_margin="6dp"
-                            />
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/signupColor"
-                            android:layout_margin="2dp"/>
-
-
-
-                    </LinearLayout>
-                </LinearLayout>
-                <LinearLayout
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:id="@+id/bankcardId4"
-                    android:layout_width="160dp"
-                    android:layout_height="190dp"
-                    android:layout_margin="10dp"
-                    android:padding="0dp">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical">
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="130dp"
-                            android:gravity="center"
-                            >
-
-                            <ImageView
-                                android:id="@+id/imgInhalers"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-
-                                android:src="@drawable/inhalers" />
-                        </LinearLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Inhalers"
-                            android:textColor="#000"
-                            android:textSize="18dp"
-                            android:layout_margin="6dp"/>
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/signupColor"
-                            android:layout_margin="2dp"/>
-
-
-                    </LinearLayout>
-                </LinearLayout>
-
-            </LinearLayout>
+            </ScrollView>
         </LinearLayout>
-    </ScrollView>
-    </LinearLayout>
-</RelativeLayout>
+    </RelativeLayout>
 
 </LinearLayout>
