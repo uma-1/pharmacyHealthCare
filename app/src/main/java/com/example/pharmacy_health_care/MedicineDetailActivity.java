@@ -34,7 +34,7 @@ public class MedicineDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medicine_detail);
 
-        rvItems= findViewById(R.id.mobileDetailRv);
+        rvItems= findViewById(R.id.medicineDetailRv);
         buttonback = findViewById(R.id.btnbacks);
         buttonback.setOnClickListener(new View.OnClickListener() {
             @Override
