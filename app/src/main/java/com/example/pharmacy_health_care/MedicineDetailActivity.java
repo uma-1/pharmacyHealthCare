@@ -1,9 +1,8 @@
 package com.example.pharmacy_health_care;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.os.Bundle;
 //import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 //import android.support.v7.widget.GridLayoutManager;
 //import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -30,13 +29,12 @@ public class MedicineDetailActivity extends AppCompatActivity {
     private RecyclerView rvItems;
     List<Items> itemList = new ArrayList<>();
     String selectedName;
-    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medicine_detail);
 
-        rvItems= findViewById(R.id.medicineDetailRv);
+        rvItems= findViewById(R.id.mobileDetailRv);
         buttonback = findViewById(R.id.btnbacks);
         buttonback.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,8 +75,7 @@ public class MedicineDetailActivity extends AppCompatActivity {
             String image= item.getImageName();
 
             if ( item.getName().equals(selectedName) ){
-
-                itemsArrayList.add(new Items(item.getName(), item.getImageName(),item.getPrice(), item.getDesc()));
+                itemsArrayList.add(new Items(item.getName(), item.getDescription(), item.getImageName(), item.getPrice()));
             }
 
         }

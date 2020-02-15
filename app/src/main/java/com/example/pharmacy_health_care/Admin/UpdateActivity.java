@@ -96,7 +96,7 @@ public class UpdateActivity extends AppCompatActivity {
 
                etname.setText(response.body().getName());
                etprice.setText(Double.toString(response.body().getPrice()));
-               etdescription.setText(response.body().getDesc());
+               etdescription.setText(response.body().getDescription());
 
            }
 

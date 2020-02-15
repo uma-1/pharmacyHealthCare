@@ -124,7 +124,7 @@ public class AddItemActivity extends AppCompatActivity {
 
         double price = Double.parseDouble(etPrice.getText().toString());
 
-        Items heroes = new Items(name,imageName, price, description);
+        Items heroes = new Items(name,description,imageName,  price);
 
         API Api = Reusable.getInstance().create(API.class);
         Call<Void> itemsCall = Api.addItem(heroes);
