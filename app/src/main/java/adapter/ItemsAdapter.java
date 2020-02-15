@@ -70,7 +70,7 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ItemViewHold
                 intent.putExtra("image", imagePath);
                 intent.putExtra("name", item.getName());
                 intent.putExtra("price", item.getPrice()+"");
-                intent.putExtra("description", item.getDesciption());
+                intent.putExtra("description", item.getDesc());
 
                 mContext.startActivity(intent);
             }

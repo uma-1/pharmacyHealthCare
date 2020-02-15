@@ -9,12 +9,14 @@ import android.os.Bundle;
 //import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class DashboardActivity extends AppCompatActivity {
+    private Button btnMap;
     private ImageView imgLiquid, imgTablets, imgCapsule, imgInjection, imgInhalers, imgDrops;
 //    private DrawerLayout mDrawerlayout;
 //    private ActionBarDrawerToggle mToggle;
@@ -28,7 +30,7 @@ public class DashboardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
-
+        btnMap = findViewById(R.id.btnMap);
         imgLiquid = findViewById(R.id.imgLiquid);
         imgCapsule = findViewById(R.id.imgCapsule);
         imgInjection = findViewById(R.id.imgInjection);
@@ -37,6 +39,15 @@ public class DashboardActivity extends AppCompatActivity {
         imgInhalers = findViewById(R.id.imgInhalers);
 
 
+
+        btnMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DashboardActivity.this, GoogleMapsActivity.class);
+                startActivity(intent);
+
+            }
+        });
 
         imgLiquid.setOnClickListener(new View.OnClickListener() {
             @Override
